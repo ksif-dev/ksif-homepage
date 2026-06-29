@@ -1,0 +1,18 @@
+{
+  "title": "Large-cap & Market-based Investment",
+  "lead": "현재 LMI팀은 EISES(Enhanced Index & Sector ETF Strategy)와 ADM(Accelerating Dual Momentum), Sector ETF 전략을 운용하고 있습니다. EISES는 벤치마크(코스피)를 추종하는 한편 안정적인 알파를 추구하는 전략이며, ADM은 MSCI World ETF, 중국 ETF, 국채 ETF의 듀얼 모멘텀을 사용한 투자전략이며, Sector ETF는 low correlation 및 모멘텀 필터를 적용한 투자전략입니다. 또한 체결 데이터를 활용하는 Order Imbalance 전략을 개발 및 테스트하여 추후 투자 포트폴리오에 추가할 계획을 가지고 있습니다. 향후 미국 주식으로 자산군을 확대할 예정인만큼 미국 시장에 대해 기존 전략 및 백테스팅 전략들을 전반적으로 재검토할 예정입니다.",
+  "sections": [
+    {
+      "title": "EISES(Enhanced Index & Sector ETF Strategy)",
+      "body": "현재 LMI팀이 운용중인 EISES 전략은 KOSPI 시가총액 상위 50개 종목을 이용하여 KOSPI200을 추종하며 모멘텀을 활용한 Sector ETF 전략(SES)을 통한 Enhanced Index Alpha를 실현하는 전략입니다. 이 전략은 KOSPI 상위 50개 종목을 시가총액 비중으로 투자하는 단순한 전략이며 기존 포트폴리오에 있는 종목이 시가총액 55위 이내일 경우 그대로 보유를 하는 버퍼룰(Buffer Rule)을 적용하고 있습니다. 약 50개 종목으로 구성된 KOSPI200 추종 Index 포트폴리오는 100종목, 150종목으로 구성된 포트폴리오와 비교했을 때 종목간 상관계수가 충분히 크며 평균추적오차가 낮습니다. 따라서 이 전략의 장점은 더 적은 비용으로 KOSPI200을 추종할 수 있다는 점에 있습니다."
+    },
+    {
+      "title": "ADM(Accelerating Dual Momentum Strategy)",
+      "body": "2012년 안토나치(Antonacci)가 절대모멘텀과 상대모멘텀 합친 듀얼모멘텀을 활용하여 글로벌 전략적 자산 배분을 하는 방법을 발표하였고, 주식 채권 리츠 금과 국고채등 단순 보유 전략에 비해 연평균 수익률 증가와 변동성 감소, MDD감소등의 효과를 보였습니다. ADM전략은 간단한 룰베이스 투자기법이고, 기존 듀얼모멘텀 전략이 가지는 12개월의 긴 모멘텀 시그널에 비해 상대적으로 짧은 반추기간과 월별 리밸런싱을 통해 시장 움직임에 좀 더 빨리 대응할수 있다는 장점을 가집니다."
+    },
+    {
+      "title": "Sector ETF Strategy",
+      "body": "Sector ETF 전략은 ADM 전략과 합성되어 운용되는 전략으로 국내 총 18개의 Sector ETF에 대해 (1) 상관계수가 낮은 pair 6개 즉, 12개의 섹터 ETF를 선별하고, (2)지난 1개월간 양의 수익률을 가지는 ETF를 선별하여, (3) 지난 1개월간 수익률의 표준편차의 역수를 weight로 주어 포트폴리오를 구성하고 있습니다. 이때, 모든 Sector ETF의 지난 1개월간의 수익률이 음수일 때는 안전자산인 Gold ETF를 비중 100%로 포트폴리오에 편입합니다."
+    }
+  ]
+}
