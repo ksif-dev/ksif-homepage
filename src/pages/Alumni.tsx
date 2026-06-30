@@ -11,7 +11,7 @@ export const Alumni = () => {
   const [classes, setClasses] = useState<FellowClass[]>([]);
 
   useEffect(() => {
-    fetch('/data/fellows.json')
+    fetch(`${import.meta.env.BASE_URL}data/fellows.json`)
       .then((r) => r.json() as Promise<FellowClass[]>)
       .then(setClasses);
   }, []);

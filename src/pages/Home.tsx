@@ -17,7 +17,7 @@ export const Home = () => {
   const [data, setData] = useState<HomeData | null>(null);
 
   useEffect(() => {
-    fetch('/data/home.json')
+    fetch(`${import.meta.env.BASE_URL}data/home.json`)
       .then((r) => r.json() as Promise<HomeData>)
       .then(setData);
   }, []);
@@ -109,7 +109,7 @@ export const Home = () => {
               const img = (
                 <img
                   key={s.alt}
-                  src={s.img}
+                  src={`${import.meta.env.BASE_URL}${s.img.replace(/^\//, '')}`}
                   alt={s.alt}
                   className="h-8 w-auto object-contain grayscale opacity-40 hover:opacity-75 hover:grayscale-0 transition-all duration-300"
                 />

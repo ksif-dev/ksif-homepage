@@ -56,7 +56,7 @@ export const AlumniMgmr = () => {
   const [fellows, setFellows] = useState<ManagementFellow[]>([]);
 
   useEffect(() => {
-    fetch('/data/management-fellows.json')
+    fetch(`${import.meta.env.BASE_URL}data/management-fellows.json`)
       .then((r) => r.json() as Promise<ManagementFellow[]>)
       .then(setFellows);
   }, []);

@@ -16,7 +16,7 @@ export const AboutUs = () => {
   const [data, setData] = useState<AboutData | null>(null);
 
   useEffect(() => {
-    fetch('/data/about.json')
+    fetch(`${import.meta.env.BASE_URL}data/about.json`)
       .then((r) => r.json() as Promise<AboutData>)
       .then(setData);
   }, []);

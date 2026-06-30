@@ -20,7 +20,7 @@ export const TeamRoute = () => {
   useEffect(() => {
     if (!slug) return;
     setData(null);
-    fetch(`/data/team-${slug}.json`)
+    fetch(`${import.meta.env.BASE_URL}data/team-${slug}.json`)
       .then((r) => r.json() as Promise<TeamData>)
       .then(setData);
   }, [slug]);
