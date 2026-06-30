@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import { Layout } from './components/Layout';
 import { AboutUs } from './pages/AboutUs';
 import { Alumni } from './pages/Alumni';
-import { AlumniMgmr } from './pages/AlumniMgmr';
 import { Home } from './pages/Home';
 import { TeamRoute } from './pages/TeamRoute';
 import './index.css';
@@ -21,7 +20,6 @@ createRoot(root).render(
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/team/:slug" element={<TeamRoute />} />
           <Route path="/alumni" element={<Alumni />} />
-          <Route path="/alumni-mgmr" element={<AlumniMgmr />} />
         </Routes>
       </Layout>
     </BrowserRouter>

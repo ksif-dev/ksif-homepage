@@ -12,11 +12,6 @@ const teamLinks = [
   { to: '/team/qvi', label: 'QVI' },
 ];
 
-const alumniLinks = [
-  { to: '/alumni', label: 'Past Fellows' },
-  { to: '/alumni-mgmr', label: 'Past Management Fellows' },
-];
-
 const DropdownMenu = ({
   links,
 }: {
@@ -48,16 +43,12 @@ const DropdownMenu = ({
 
 export const Header = () => {
   const [teamOpen, setTeamOpen] = useState(false);
-  const [alumniOpen, setAlumniOpen] = useState(false);
   const teamRef = useRef<HTMLLIElement>(null);
-  const alumniRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const onClickOutside = (e: MouseEvent) => {
       if (teamRef.current && !teamRef.current.contains(e.target as Node))
         setTeamOpen(false);
-      if (alumniRef.current && !alumniRef.current.contains(e.target as Node))
-        setAlumniOpen(false);
     };
     document.addEventListener('mousedown', onClickOutside);
     return () => document.removeEventListener('mousedown', onClickOutside);
@@ -117,37 +108,18 @@ export const Header = () => {
             {teamOpen && <DropdownMenu links={teamLinks} />}
           </li>
 
-          {/* Alumni dropdown */}
-          <li
-            ref={alumniRef}
-            className="relative list-none"
-            onMouseEnter={() => setAlumniOpen(true)}
-            onMouseLeave={() => setAlumniOpen(false)}
+          <NavLink
+            to="/alumni"
+            className={({ isActive }) =>
+              `text-[16px] font-semibold leading-tight whitespace-nowrap transition-colors ${
+                isActive
+                  ? 'text-[#ff385c]'
+                  : 'text-[#222222] hover:text-[#ff385c]'
+              }`
+            }
           >
-            <button
-              type="button"
-              className="flex items-center gap-1 text-[16px] font-semibold text-[#222222] hover:text-[#ff385c] transition-colors"
-              onClick={() => setAlumniOpen((o) => !o)}
-            >
-              Alumni
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 4.5L6 7.5L9 4.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            {alumniOpen && <DropdownMenu links={alumniLinks} />}
-          </li>
+            Alumni
+          </NavLink>
         </nav>
       </div>
     </header>

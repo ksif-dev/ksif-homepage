@@ -2,29 +2,11 @@
   { "name": "한명훈", "fellow": "17th Fellow" },
   { "name": "조상흠", "fellow": "16th Fellow" },
   { "name": "안가람", "fellow": "11th Fellow" },
-  {
-    "name": "김민기",
-    "fellow": "10th Fellow",
-    "home": "https://www.kcmi.re.kr/expert/expert_view?mem_no=64960",
-    "linkedin": "https://www.linkedin.com/in/minki-kim-16658414b/"
-  },
-  {
-    "name": "석상익",
-    "fellow": "10th Fellow",
-    "home": "http://mgmt.ulsan.ac.kr/profile/info.do?m=0103",
-    "linkedin": "https://www.linkedin.com/in/%EC%83%81%EC%9D%B5-%EC%84%9D-a00409179/?originalSubdomain=kr"
-  },
-  {
-    "name": "권민경",
-    "fellow": "5th Fellow",
-    "home": "https://www.kcmi.re.kr/expert/expert_view?mem_no=50104"
-  },
-  {
-    "name": "이덕현",
-    "fellow": "5th Fellow",
-    "linkedin": "https://www.linkedin.com/in/%EC%9D%B4%EB%8D%95%ED%98%84-deokhyeon-lee-b6808321/"
-  },
+  { "name": "김민기", "fellow": "10th Fellow" },
+  { "name": "석상익", "fellow": "10th Fellow" },
+  { "name": "권민경", "fellow": "5th Fellow" },
+  { "name": "이덕현", "fellow": "5th Fellow" },
   { "name": "박상진", "fellow": "3rd Fellow" },
-  { "name": "김기덕", "fellow": "1st Fellow" },
-  { "name": "황인창", "fellow": "2nd Fellow" }
+  { "name": "황인창", "fellow": "2nd Fellow" },
+  { "name": "김기덕", "fellow": "1st Fellow" }
 ]
