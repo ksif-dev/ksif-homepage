@@ -25,8 +25,20 @@
     }
   ],
   "sponsors": [
-    { "img": "/assets/images/brands/hantu.png", "alt": "한국투자증권","href": "https://securities.koreainvestment.com/main/Main.jsp" },
-    { "img": "/assets/images/brands/truston.png", "alt": "truston", "href": "https://www.trustonasset.com" },
-    { "img": "/assets/images/brands/nh-futures.png", "alt": "NH선물", "href": "https://www.futures.co.kr" }
+    {
+      "img": "/assets/images/brands/hantu.png",
+      "alt": "한국투자증권",
+      "href": "https://securities.koreainvestment.com/main/Main.jsp"
+    },
+    {
+      "img": "/assets/images/brands/truston.png",
+      "alt": "truston",
+      "href": "https://www.trustonasset.com"
+    },
+    {
+      "img": "/assets/images/brands/nh-futures.png",
+      "alt": "NH선물",
+      "href": "https://www.futures.co.kr"
+    }
   ]
 }
