@@ -26,7 +26,7 @@ export const Home = () => {
     <>
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="bg-white px-6 py-16">
-        <div className="max-w-360 mx-auto w-full">
+        <div className="max-w-360 mx-auto w-full text-center">
           <h1 className="text-[28px] font-bold leading-[1.43] text-[#222222]">
             KAIST Student Investment Fund
           </h1>

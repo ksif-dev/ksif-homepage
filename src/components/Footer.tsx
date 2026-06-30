@@ -68,7 +68,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-6 border-t border-[#dddddd]">
-          <p className="text-[13px] font-normal leading-[1.23] text-[#6a6a6a]">
+          <p className="text-[13px] font-normal leading-[1.23] text-[#6a6a6a] text-center">
             &copy; 2026 KAIST Student Investment Fund. All rights reserved.
           </p>
         </div>
