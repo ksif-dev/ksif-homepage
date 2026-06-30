@@ -4,12 +4,14 @@ interface InnerPageBannerProps {
 
 export const InnerPageBanner = ({ title }: InnerPageBannerProps) => {
   return (
-    <section className="bg-[#f7f7f7] px-6 pt-12 pb-8">
+    <section className="bg-[#25282b] px-8 pt-24 pb-16">
       <div className="max-w-245 mx-auto">
-        <h1 className="text-[28px] font-bold leading-[1.43] text-[#222222] text-center">
+        <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-4">
+          KSIF
+        </p>
+        <h1 className="text-[48px] font-light leading-[52px] text-white">
           {title}
         </h1>
-        <div className="mt-8 border-t border-[#dddddd]" />
       </div>
     </section>
   );

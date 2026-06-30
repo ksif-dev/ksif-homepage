@@ -10,9 +10,9 @@ export const TeamSidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <aside className="sticky top-24">
-      <div className="bg-[#f7f7f7] rounded-[14px] p-6">
-        <p className="text-[14px] font-medium leading-[1.29] text-[#6a6a6a] mb-4">
+    <aside className="sticky top-20">
+      <div className="bg-[#f2f2f2] rounded-md p-6">
+        <p className="text-[12px] font-semibold leading-4 tracking-[0.57px] uppercase text-[#7e7e7e] mb-4">
           Our Team
         </p>
         <ul className="flex flex-col gap-1">
@@ -22,28 +22,12 @@ export const TeamSidebar = () => {
               <li key={team.to}>
                 <Link
                   to={team.to}
-                  className={`flex items-start gap-3 px-3 py-2.5 rounded-lg text-[14px] font-normal leading-[1.43] transition-colors ${
+                  className={`flex items-start gap-2 px-3 py-2.5 rounded-md text-[16px] font-normal leading-tight transition-colors ${
                     active
-                      ? 'bg-white text-[#ff385c] shadow-sm'
-                      : 'text-[#222222] hover:bg-[#f2f2f2]'
+                      ? 'bg-white text-[#25282b] border-l-2 border-[#e60000]'
+                      : 'text-[#7e7e7e] hover:text-[#25282b]'
                   }`}
                 >
-                  <svg
-                    width="16"
-                    aria-hidden="true"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className="flex-shrink-0 mt-0.75"
-                  >
-                    <path
-                      d="M6 3L11 8L6 13"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
                   {team.label}
                 </Link>
               </li>

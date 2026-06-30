@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 
 const navLinks = [
   { to: '/', label: 'Home', end: true },
-  { to: '/about-us', label: 'About Us' },
+  { to: '/about-us', label: 'About' },
 ];
 
 const teamLinks = [
@@ -16,30 +16,26 @@ const DropdownMenu = ({
   links,
 }: {
   links: { to: string; label: string }[];
-}) => {
-  return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 min-w-45 z-50">
-      <ul className="bg-white border border-[#dddddd] rounded-lg py-1 shadow-sm">
-        {links.map((link) => (
-          <li key={link.to}>
-            <NavLink
-              to={link.to}
-              className={({ isActive }) =>
-                `block px-4 py-2 text-[14px] font-normal leading-[1.43] transition-colors ${
-                  isActive
-                    ? 'text-[#ff385c]'
-                    : 'text-[#222222] hover:text-[#ff385c]'
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+}) => (
+  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 min-w-40 z-50">
+    <ul className="bg-[#25282b] border border-white/20 py-1 rounded-md">
+      {links.map((link) => (
+        <li key={link.to}>
+          <NavLink
+            to={link.to}
+            className={({ isActive }) =>
+              `block px-4 py-2.5 text-[16px] font-normal leading-tight transition-colors ${
+                isActive ? 'text-white' : 'text-white/60 hover:text-white'
+              }`
+            }
+          >
+            {link.label}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export const Header = () => {
   const [teamOpen, setTeamOpen] = useState(false);
@@ -55,20 +51,26 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-white border-b border-[#dddddd]">
-      <div className="max-w-360 mx-auto px-5 h-full relative flex items-center">
-        {/* Desktop nav — absolutely centered */}
-        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+    <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-[#25282b]">
+      <div className="max-w-360 mx-auto px-8 h-full relative flex items-center">
+        {/* Wordmark — absolutely centered */}
+        <NavLink
+          to="/"
+          className="absolute left-1/2 -translate-x-1/2 text-[16px] font-extrabold text-white tracking-[0.5px]"
+        >
+          KSIF
+        </NavLink>
+
+        {/* Nav — left side */}
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               end={link.end}
               className={({ isActive }) =>
-                `text-[16px] font-semibold leading-tight whitespace-nowrap transition-colors ${
-                  isActive
-                    ? 'text-[#ff385c]'
-                    : 'text-[#222222] hover:text-[#ff385c]'
+                `text-[16px] font-normal leading-tight transition-colors ${
+                  isActive ? 'text-white' : 'text-white/60 hover:text-white'
                 }`
               }
             >
@@ -76,7 +78,6 @@ export const Header = () => {
             </NavLink>
           ))}
 
-          {/* Our Team dropdown */}
           <li
             ref={teamRef}
             className="relative list-none"
@@ -85,7 +86,7 @@ export const Header = () => {
           >
             <button
               type="button"
-              className="flex items-center gap-1 text-[16px] font-semibold text-[#222222] hover:text-[#ff385c] transition-colors"
+              className="flex items-center gap-1 text-[16px] font-normal text-white/60 hover:text-white transition-colors"
               onClick={() => setTeamOpen((o) => !o)}
             >
               Our Team
@@ -111,10 +112,8 @@ export const Header = () => {
           <NavLink
             to="/alumni"
             className={({ isActive }) =>
-              `text-[16px] font-semibold leading-tight whitespace-nowrap transition-colors ${
-                isActive
-                  ? 'text-[#ff385c]'
-                  : 'text-[#222222] hover:text-[#ff385c]'
+              `text-[16px] font-normal leading-tight transition-colors ${
+                isActive ? 'text-white' : 'text-white/60 hover:text-white'
               }`
             }
           >

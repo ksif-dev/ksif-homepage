@@ -22,7 +22,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className="pt-20">{children}</main>
+      <main className="pt-14">{children}</main>
       <Footer />
 
       {/* Scroll to top */}
@@ -30,7 +30,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="맨 위로"
-        className={`fixed bottom-8 right-8 w-12 h-12 rounded-full bg-[#ff385c] text-white flex items-center justify-center transition-all duration-300 active:bg-[#e00b41] z-50 ${
+        className={`fixed bottom-8 right-8 w-12 h-12 rounded-full bg-[#e60000] text-white flex items-center justify-center transition-colors hover:bg-[#cc0000] z-50 ${
           showScrollTop
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-4 pointer-events-none'
@@ -45,7 +45,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         >
           <path
             d="M10 15V5M5 10L10 5L15 10"
-            stroke="white"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"

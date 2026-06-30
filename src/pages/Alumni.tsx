@@ -29,26 +29,30 @@ export const Alumni = () => {
     <>
       <InnerPageBanner title="Alumni" />
 
-      <section className="bg-white px-6 py-16">
+      {/* Fellows */}
+      <section className="bg-white px-8 py-16">
         <div className="max-w-245 mx-auto">
-          <h2 className="text-[20px] font-semibold leading-tight text-[#222222] mb-8">
+          <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-4">
             Fellows
+          </p>
+          <h2 className="text-[40px] font-light leading-11 text-[#25282b] mb-10">
+            역대 Fellows
           </h2>
-          <div className="flex flex-col divide-y divide-[#ebebeb]">
+          <div className="flex flex-col divide-y divide-[#f2f2f2]">
             {classes.map((cls) => (
               <div
                 key={cls.label}
                 className="py-8 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-6 items-baseline"
               >
                 <div>
-                  <p className="text-[16px] font-semibold leading-tight text-[#222222]">
+                  <p className="text-[16px] font-bold leading-tight text-[#25282b]">
                     {cls.label}
                   </p>
-                  <p className="text-[14px] font-normal leading-[1.43] text-[#6a6a6a] mt-1">
+                  <p className="text-[12px] font-semibold leading-4 tracking-[0.57px] uppercase text-[#bebebe] mt-1">
                     {cls.count}명
                   </p>
                 </div>
-                <p className="text-[16px] font-normal leading-normal text-[#3f3f3f]">
+                <p className="text-[16px] font-normal leading-tight text-[#7e7e7e]">
                   {cls.names}
                 </p>
               </div>
@@ -57,23 +61,25 @@ export const Alumni = () => {
         </div>
       </section>
 
-      <div className="border-t-8 border-[#f2f2f2]" />
-
-      <section className="bg-white px-6 py-16">
+      {/* Management Fellows */}
+      <section className="bg-[#f2f2f2] px-8 py-16">
         <div className="max-w-245 mx-auto">
-          <h2 className="text-[20px] font-semibold leading-tight text-[#222222] mb-8">
+          <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-4">
             Management Fellows
+          </p>
+          <h2 className="text-[40px] font-light leading-11 text-[#25282b] mb-10">
+            역대 Management Fellows
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {mgmtFellows.map((fellow) => (
               <div
                 key={fellow.name}
-                className="bg-white border border-[#dddddd] rounded-[14px] p-6 flex flex-col gap-2 hover:shadow-md transition-shadow"
+                className="bg-white rounded-md p-6 flex flex-col gap-2"
               >
-                <p className="text-[16px] font-semibold leading-tight text-[#222222]">
+                <p className="text-[16px] font-bold leading-tight text-[#25282b]">
                   {fellow.name}
                 </p>
-                <p className="text-[14px] font-normal leading-[1.43] text-[#6a6a6a]">
+                <p className="text-[12px] font-semibold leading-4 tracking-[0.57px] uppercase text-[#7e7e7e]">
                   {fellow.fellow}
                 </p>
               </div>

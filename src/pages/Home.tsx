@@ -24,25 +24,31 @@ export const Home = () => {
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-16">
-        <div className="max-w-360 mx-auto w-full text-center">
-          <h1 className="text-[28px] font-bold leading-[1.43] text-[#222222]">
-            KAIST Student Investment Fund
-          </h1>
-          <p className="mt-3 text-[14px] font-normal leading-[1.43] text-[#6a6a6a]">
+      {/* ── Hero — ink dark band ──────────────────────────────────── */}
+      <section className="bg-[#25282b] px-8 pt-32 pb-24">
+        <div className="max-w-245 mx-auto">
+          <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-6">
             Since 2008
           </p>
+          <h1 className="text-[90px] font-extrabold leading-[84px] tracking-[-1px] uppercase text-white">
+            KAIST
+            <br />
+            Student
+            <br />
+            Investment
+            <br />
+            Fund
+          </h1>
         </div>
       </section>
 
-      {/* ── About ────────────────────────────────────────────────── */}
-      <section className="bg-[#f7f7f7] px-6 py-16">
+      {/* ── About — light content band ────────────────────────────── */}
+      <section className="bg-white px-8 py-20">
         <div className="max-w-245 mx-auto">
-          <h2 className="text-[21px] font-bold leading-[1.43] text-[#222222] text-center">
+          <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-4">
             KSIF 소개
-          </h2>
-          <div className="mt-6 flex flex-col gap-4 text-[16px] font-normal leading-normal text-[#3f3f3f] max-w-180 mx-auto">
+          </p>
+          <div className="flex flex-col gap-4 text-[18px] font-normal leading-7 text-[#7e7e7e] max-w-180">
             <p>
               KSIF는 현장 교육을 통해 학생들에게 효율적이고 실질적인 교육기회를
               제공한다는 교육이념 하에 2008년 2월 15일자로 출범한
@@ -53,42 +59,42 @@ export const Home = () => {
               KAIST만의 독창적인 프로그램으로서 사회가 요구하는 전문인력 및
               연구인력을 배출하는 것을 목표로 하고 있습니다.
             </p>
-            <div className="mt-6">
-              <Link
-                to="/about-us"
-                className="inline-flex items-center px-6 py-3.5 bg-[#ff385c] text-white text-[16px] font-medium leading-tight rounded-lg transition-colors active:bg-[#e00b41]"
-              >
-                더 알아보기
-              </Link>
-            </div>
+          </div>
+          <div className="mt-12">
+            <Link
+              to="/about-us"
+              className="inline-flex items-center px-6 py-3 bg-[#e60000] text-white text-[18px] font-normal leading-7 rounded-[60px] border border-[#e60000] transition-colors hover:bg-[#cc0000] hover:border-[#cc0000]"
+            >
+              더 알아보기
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ── Our Team ─────────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-16">
+      <section className="bg-[#f2f2f2] px-8 py-20">
         <div className="max-w-245 mx-auto">
-          <h2 className="mb-8 text-[21px] font-bold leading-[1.43] text-[#222222] text-center">
+          <p className="text-[16px] font-extrabold uppercase text-[#e60000] mb-4">
             Our Team
-          </h2>
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {(data?.teams ?? []).map((team) => (
               <Link
                 key={team.to}
                 to={team.to}
-                className="group bg-white border border-[#dddddd] rounded-[14px] p-6 flex flex-col hover:shadow-md transition-shadow"
+                className="group bg-white rounded-md p-6 flex flex-col"
               >
-                <span className="text-[12px] font-semibold leading-tight text-[#6a6a6a] uppercase tracking-[0.32px]">
+                <span className="text-[12px] font-semibold leading-4 tracking-[0.57px] uppercase text-[#7e7e7e]">
                   {team.abbr}
                 </span>
-                <h3 className="mt-3 mb-3 text-[16px] font-semibold leading-tight whitespace-pre-line text-[#222222]">
+                <h3 className="mt-3 mb-3 text-[24px] font-bold leading-none text-[#25282b] whitespace-pre-line">
                   {team.title}
                 </h3>
-                <p className="text-[14px] font-normal leading-[1.43] text-[#3f3f3f] flex-1">
+                <p className="text-[16px] font-normal leading-tight text-[#7e7e7e] flex-1">
                   {team.desc}
                 </p>
-                <div className="mt-5">
-                  <span className="text-[14px] font-normal leading-[1.43] text-[#222222] group-hover:text-[#ff385c] underline transition-colors">
+                <div className="mt-6">
+                  <span className="inline-flex items-center px-4 py-2 border border-[#e60000] text-[#e60000] text-[16px] font-normal rounded-[60px] group-hover:bg-[#e60000] group-hover:text-white transition-colors">
                     더 알아보기
                   </span>
                 </div>
@@ -99,9 +105,9 @@ export const Home = () => {
       </section>
 
       {/* ── Sponsored by ─────────────────────────────────────────── */}
-      <section className="bg-[#f7f7f7] px-6 py-16">
+      <section className="bg-white px-8 py-20">
         <div className="max-w-245 mx-auto">
-          <p className="text-[14px] font-medium leading-[1.29] text-[#6a6a6a] mb-8 text-center uppercase tracking-[0.32px]">
+          <p className="text-[12px] font-semibold leading-4 tracking-[0.57px] uppercase text-[#bebebe] mb-10 text-center">
             Sponsored by
           </p>
           <div className="flex flex-wrap items-center justify-center gap-12">
@@ -111,7 +117,7 @@ export const Home = () => {
                   key={s.alt}
                   src={`${import.meta.env.BASE_URL}${s.img.replace(/^\//, '')}`}
                   alt={s.alt}
-                  className="h-8 w-auto object-contain grayscale opacity-40 hover:opacity-75 hover:grayscale-0 transition-all duration-300"
+                  className="h-8 w-auto object-contain grayscale opacity-40 hover:opacity-80 hover:grayscale-0 transition-all duration-300"
                 />
               );
               return s.href ? (
