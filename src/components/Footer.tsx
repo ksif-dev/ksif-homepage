@@ -25,7 +25,7 @@ const columns = [
 export const Footer = () => {
   return (
     <footer className="bg-white border-t border-[#dddddd]">
-      <div className="max-w-360 mx-auto px-12 py-12">
+      <div className="max-w-245 mx-auto px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12">
           {/* Link columns */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
